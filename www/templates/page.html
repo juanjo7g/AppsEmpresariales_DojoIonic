@@ -1,6 +1,6 @@
 <ion-view view-title="Juegos">
     <ion-nav-buttons side="right">
-        <button class="button button-icon button-clear ion-compose" ng-click="limpiarJuego()">
+        <button class="button button-icon button-clear ion-compose">
         </button>
     </ion-nav-buttons>
     <ion-content>
@@ -50,38 +50,6 @@
                     <div class="button-bar">
                         <a class="button button-stable icon ion-backspace-outline" ng-click="votarModal.hide()">  Cancelar</a>
                         <a class="button button-positive icon ion-ios-people" ng-click="votar(juego.votos)">  Votar</a>
-                    </div>
-                </ion-content>
-            </ion-modal-view>
-        </script>
-        <script id="nuevoModal.html" type="text/ng-template">
-            <ion-modal-view>
-                <ion-header-bar class="bar bar-header bar-dark">
-                    <h1 class="title">Nuevo Juego</h1>
-                    <button class="button button-clear button-primary" ng-click="nuevoModal.hide()">Cancelar</button>
-                </ion-header-bar>
-                <ion-content class="padding">
-                    <div class="list">
-                        <div class="item item-divider">Nombre</div>
-                        <label class="item item-input">
-                            <input ng-model="juego.nombre" type="text">
-                        </label>
-                        <div class="item item-divider">Fecha Lanzamiento</div>
-                        <label class="item item-input">
-                            <input ng-model="juego.fechaLanzamiento" type="text">
-                        </label>
-                        <div class="item item-divider">Género</div>
-                        <label class="item item-input">
-                            <input ng-model="juego.genero" type="text">
-                        </label>
-                        <div class="item item-divider">Link imagen</div>
-                        <label class="item item-input">
-                            <input ng-model="juego.imagen" type="text">
-                        </label>
-                    </div>
-                    <div class="button-bar">
-                        <a class="button button-stable icon ion-backspace-outline" ng-click="nuevoModal.hide()">  Cancelar</a>
-                        <a class="button button-positive icon ion-ios-compose-outline" ng-click="anadirJuego()">  Crear</a>
                     </div>
                 </ion-content>
             </ion-modal-view>

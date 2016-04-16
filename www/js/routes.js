@@ -1,11 +1,12 @@
-angular.module('app.routes',[]){
+angular.module('app.routes',[])
 	.config(function($stateProvider, $urlRouterProvider){
 		$stateProvider
 		.state('menu',{
 			url : '/menu',
+			abstract: true,
 			templateUrl : 'templates/menu.html'
 		})
-		.state('menu page', {
+		.state('menu.page', {
 			url : '/index',
 			views : {
 				'side-menu' : {
@@ -13,7 +14,6 @@ angular.module('app.routes',[]){
 					controller : 'pageCtrl'
 				}
 			}
-		})
-		$urlRouterProvider.otherwise('#/menu')
-	}
+		});
+		$urlRouterProvider.otherwise('/menu/index');
 });
